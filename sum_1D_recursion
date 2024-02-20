@@ -1,0 +1,39 @@
+#include <stdio.h>
+int sum(int [], int , int );
+int main()
+{
+    int a[10];
+    int n, i, s;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    printf("Enter elements in the array: ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    s = sum(a, 0, n);
+    printf("Sum of array elements: %d", s);
+    return 0;
+}
+int sum(int a[], int i, int l) 
+{
+    if(i>=l)
+    return 0;
+    else
+    return (a[i] + sum(a, i + 1, l));
+}
+
+
+/*
+      INPUT
+Enter size: 5
+Enter elements in the array: 1
+2
+3
+4
+5
+
+      OUTPUT  
+Sum of array elements: 15
+
+*/
