@@ -1,0 +1,49 @@
+#include <stdio.h>
+int palindrome(int [],int);
+int main()
+{
+    int a[10],i,j,n,b;
+    printf("Enter size: ");
+    scanf("%d",&n);
+    printf("Enter array elements\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]); 
+    }
+    b=palindrome(a,n);
+    if(b==0)
+    printf("palindrome");
+    else
+    printf("not a palindrome");
+    return 0;
+}
+int palindrome(int a[],int m)
+{
+    int i,f=0;
+    for(i=0;i<m/2;i++)
+    {
+        if(a[i]!=a[m-i-1])
+        {
+            f=1;
+            break;
+        }
+    }
+    return f;
+}
+
+
+
+
+/*
+      INPUT
+Enter size: 5
+Enter array elements
+1
+2
+3
+2
+1
+
+      OUTPUT
+palindrome
+*/
