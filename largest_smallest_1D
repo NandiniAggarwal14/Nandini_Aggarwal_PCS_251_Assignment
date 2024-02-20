@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[10],i,lg,sm;
+    printf("\nEnter number of elements: ");
+    scanf("%d",&n);
+    printf("\nEnter array elements: ");
+    for(i=0;i<n;i++)
+    {
+         scanf("%d",&a[i]);
+    }
+    lg=a[0];
+    sm=a[0];
+    for(i=0;i<n;i++)
+    {
+        if(lg<a[i])
+        lg=a[i];
+        if(sm>a[i])
+        sm=a[i];
+    }
+    printf("\n Largest element is %d and smallest is %d",lg,sm);
+    return 0;
+}
+
+
+/*
+
+      INPUT
+Enter number of elements: 6
+
+Enter array elements: 23
+21
+12
+11
+99
+87
+
+      OUTPUT  
+ Largest element is 99 and smallest is 11
+
+*/
