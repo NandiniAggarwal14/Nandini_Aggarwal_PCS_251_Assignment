@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+    int m,n,a[20][20],i,j,s=0;
+    printf("\nEnter number of rows and columns: ");
+    scanf("%d%d",&m,&n);
+    printf("\nEnter array elements: ");
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+           if(i==0 || j==0 || i==m-1 || j==n-1)
+           s=s+a[i][j];
+        }
+    }
+    printf("\nSum is %d",s);
+    return 0;
+}
+
+/*
+      INPUT
+Enter number of rows and columns: 3
+3
+
+Enter array elements: 1
+2
+3
+4
+5
+6
+7
+8
+9
+
+      OUTPUT
+Sum is 40
+
+*/
